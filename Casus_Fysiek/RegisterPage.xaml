@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Casus_Fysiek.RegisterPage"
+             BackgroundImageSource="appbackground">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#50e6e6e6" OutlineColor="Black" Margin="10" HeightRequest="60">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="LogoZUYD" WidthRequest="100" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label x:Name="label" XAlign="Center" TextColor="White" Text="Title_of_App          Register Page" FontSize="Title" />
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="#990b1e26" OutlineColor="Black" Margin="10">
+                <StackLayout>
+                    <Label x:Name="LblRegister" Text="Welcome to the Register Page!" XAlign="Center"/>
+                    <Entry x:Name="EntryUsername" Placeholder="Username"/>
+                    <Entry x:Name="EntryPassword" Placeholder="Password" IsPassword="True"/>
+                    <Entry x:Name="EntryConfirmPass" Placeholder="Confirm Password" IsPassword="True"/>
+                    <Button Text="Create Account" x:Name="BtnCreate" Clicked="BtnCreate_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

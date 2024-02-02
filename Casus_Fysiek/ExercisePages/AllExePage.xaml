@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Casus_Fysiek.ExercisePages.AllExePage"
+             BackgroundImageSource="appbackground">
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame BackgroundColor="#997d7a7a" OutlineColor="Black" Margin="10">
+                <Grid>
+                    <ListView x:Name="notesListView"
+              ItemTapped="OnItemSelected">
+
+                        <ListView.Header>
+                            <Grid Padding="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Exercise" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
+                                <Label Text="Owner" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2"  TextColor="White" FontSize="Medium"  FontAttributes="Bold" XAlign="Center"/>
+
+
+                                <BoxView BackgroundColor="Red" HeightRequest="2" VerticalOptions="EndAndExpand" Grid.Column="1" HorizontalOptions="FillAndExpand"></BoxView>
+                                <BoxView BackgroundColor="Orange" HeightRequest="2" VerticalOptions="EndAndExpand" Grid.Column="2" HorizontalOptions="FillAndExpand"></BoxView>
+
+
+                            </Grid>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+
+                                        <Image Grid.Column="0" Source="listlogo.png"/>
+                                        <Label Grid.Column="1" Text="{Binding Exercise}" XAlign="Center" FontAttributes="Bold" TextColor="Red" />
+                                        <Label Grid.Column="2" Text="{Binding CreatedByUser}" XAlign="Center" HorizontalTextAlignment="End" TextColor="Orange" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

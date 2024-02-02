@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Casus_Fysiek.MainPage"
+            BackgroundImageSource="appbackground">
+
+    <StackLayout>
+        <Frame BackgroundColor="#50e6e6e6" OutlineColor="Black" Margin="10" HeightRequest="60">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="LogoZUYD" WidthRequest="100" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label x:Name="label" XAlign="Center" TextColor="Black" Text="Title_of_App          Login Page" FontSize="Title" />
+            </StackLayout>
+            
+        </Frame>
+        <Frame BackgroundColor="#990b1e26" OutlineColor="Black" Margin="10">
+            <StackLayout>
+                <Label Text="Gebruikersnaam" TextColor="Black" FontSize="16" Padding="10,0,10,0"/>
+                <Entry x:Name="EntryUsername" Placeholder="username" PlaceholderColor="DarkGray" Keyboard="Email"/>
+                <Label Text="Wachtwoord" TextColor="Black" FontSize="16" Padding="10,0,10,0"/>
+                <Entry x:Name="EntryPassword" Placeholder="password" PlaceholderColor="DarkGray" MaxLength="15" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false" IsPassword="true" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Button Text="Log in" x:Name="BtnLogin" Clicked="BtnLogin_Clicked" Margin="10,20,30,40" />
+                    <Button Text="Register" x:Name="BtnRegister" Clicked="BtnRegister_Clicked" Margin="10,20,30,40" />
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Wachtwoord vergeten?" TextColor="LightGray" HorizontalOptions="Center"/>
+                    <Button Text="Click here" x:Name="BtnForgot" Clicked="BtnForgot_Clicked" HorizontalOptions="Center"  Margin="10,20,30,40" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        
+    </StackLayout>
+
+</ContentPage>
